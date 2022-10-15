@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Horoscope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="check-horoscope.css">
+    <script defer src="check-horoscope.js"></script>
+</head>
+<body>
+    <main class="checkHoroscope__container">
+        <header class="checkHoroscope__head">
+            <h1 id="Header-text">Check Your Horoscope For Free</h1></header>
+            <!-- Website Main Content -->
+        <div class="checkHoroscope__content">
+            <!-- Form Details -->
+            <div class="content__left">
+                <form action="" class="content__left--form" onsubmit="showMe()"   >
+                    <label for="EnterName">Enter Name</label>
+                    <input type="text" id="EnterName" required>
+                    <label for="EnterDate">Enter Date of Birth</label>
+                    <span class="BirthInput">
+                    <input type="text" id="month" placeholder="MM"
+                    minlength="1" maxlength="2" min="1" max="12"
+                     required>
+                     <input type="text" id="day" placeholder="DD"
+                     minlength="1" maxlength="2" 
+                      required>
+                      </span>
+                    <label for="placeName">Place of Birth</label>
+                    <input type="text" id="placeName" required>
+                    <button type="submit" class="check--button"  >Check Horoscope</button>
+                </form>
+            </div>
+            <!-- Rotating Ring content -->
+            <div class="content__right">
+                <img id="ringImage" src="./Assets/image-ring.png" alt="Horoscope Signs">
+            </div>
+        </div>
+        <!-- Popup content -->
+        <div class="Popup">
+            <div class="button">
+               <a href="index.html"> <button class="cancelMe" onclick="hideMe()">X</button></a>
+            </div>
+            <img id="SignImage" src="" alt="Horoscope Sign">
+            <div class="text-content">
+                <h1 id="PopUp_Header-text">
+                </h1>
+                <h2 id="sign_Title"></h2>
+
+                <p id="Sign_description">
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

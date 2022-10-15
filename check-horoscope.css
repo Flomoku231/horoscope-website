@@ -1,0 +1,289 @@
+/* CSS variables */
+:root{
+    --brand-color: #031d2e;
+    --secondary-brand-color: #ff7010;
+    --primary-text-color: #e5f0f5;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    /* fonts */
+    --primary-font-family: 'Gentium Book Plus', serif;
+    --paragraph-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --secondary-font-family: 'Courier New', Courier, monospace;
+}
+/* Page Styles */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.checkHoroscope__container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--brand-color);
+}
+.checkHoroscope__head{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+#Header-text,#sign_Title{
+    color: var(--secondary-brand-color);
+    font-family: var(--secondary-font-family);
+    font-size: 2.2rem;
+}
+.checkHoroscope__content{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+.content__left{
+    z-index: 100;
+    position: relative;
+    justify-content: center;
+}
+.content__right{
+    width: 20%;
+    margin-left: -35rem;
+}
+/* Form Content */
+.content__left--form{
+    display: flex;
+    animation: FromRight 3s forwards ease-in;
+    -webkit-animation: FromRight 2s forwards ;
+    -moz-animation: FromRight 3s forwards ease-in;
+    flex-direction: column;
+    box-shadow: -3px 9px 16px -3px rgba(18,18,18,0.62);
+    -webkit-box-shadow: -3px 9px 16px -3px rgba(18,18,18,0.62);
+    -moz-box-shadow: -3px 9px 16px -3px rgba(18,18,18,0.62);
+    width: 30rem;
+    padding: 2rem;
+    justify-content: center;
+    gap: 0.9rem;
+    max-height: 100rem;
+    background-color:var(--white-color);
+    border-radius: 1rem;
+}
+@keyframes FromRight  {
+    from{
+        -webkit-transform: translateX(10rem);
+        opacity: 0;
+    }
+    to{
+        -webkit-transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Form */
+.content__left--form label{
+    font-family: var(--primary-font-family);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--black-color);
+}
+.BirthInput{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex: row;
+}
+input[type=text],input[type=date]{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--secondary-brand-color);
+    font-size: 1.3rem;
+    font-family:  sans-serif;
+    outline: 0px;
+}
+ /*Rotate Ring  */
+#ringImage{
+    width: 40rem;
+    animation: Rotate 9s infinite linear;
+    -webkit-animation: Rotate 9s infinite linear;
+    -moz-animation: Rotate 9s infinite linear;
+
+}
+@keyframes Rotate {
+    0% {
+    -webkit-transform: rotate(0deg);
+   }
+100% {
+    -webkit-transform: rotate(360deg);
+}
+    
+}
+.check--button{
+    height: 3rem;
+    background-color: var(--brand-color);
+    font-size: 1.4rem;
+    font-family: var(--primary-font-family);
+    color: var(--primary-text-color);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.check--button:hover{
+    color: var(--secondary-brand-color);
+}
+/* Popup Styling*/
+.Popup{
+    width: 88%;
+    box-shadow: -4px 10px 400px 200px rgba(41, 41, 41, 0.624);
+    -webkit-box-shadow: -4px 10px 400px 200px rgba(41, 41, 41, 0.624);
+    -moz-box-shadow: -4px 10px 400px 200px rgba(41, 41, 41, 0.624);
+    max-height: 40rem ;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    visibility: hidden;
+    padding: 0.8rem 1rem;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-text-color);
+    margin: auto;
+    position: absolute;
+}
+.open-PopUp{
+    visibility: visible;
+    animation: Popup 1s forwards ease-in-out;
+    top: -250px;
+}
+@keyframes Popup {
+    0%{}
+    50%{top: 400px;}
+    100%{top: 50%; }
+}
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.cancelMe{
+    right: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.2rem;
+    background-color: var(--primary-text-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-brand-color);
+}
+#SignImage{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.text-content{
+    width: 95%;
+    margin-top: 15px;
+}
+#PopUp_Header-text{
+    font-family: var(--paragraph-font-family);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+#Sign_description{
+    font-family: var(--paragraph-font-family);
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    text-align: left;
+}
+
+/* Responsiveness */
+@media all and (max-width: 800px){
+    #Header-text {
+        font-size: 1.8rem;
+    }
+    .content__right {
+        width: 70%;
+        margin-left: -30rem;
+    }
+}
+@media all and (max-width: 550px) {
+    .checkHoroscope__head {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .open-PopUp{
+        max-height: 60rem;
+    }
+    #Header-text {
+        font-size: 1.6rem;
+    }
+    #PopUp_Header-text {
+    font-family: var(--paragraph-font-family);
+    font-size: 1.2rem;
+    margin-bottom: 7px; 
+    }
+    #sign_Title {
+        font-size: 1.8rem;
+    }
+
+    .content__left {
+        z-index: 100;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+    }
+    .checkHoroscope__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .content__left--form {
+        width: 80%;
+        margin: auto;
+        padding: 2rem 1rem;
+    }
+    .content__left--form label {
+        font-size: 1.1rem;
+    }
+    input[type=text], input[type=date] {
+        padding: 0.8rem;
+        border-radius: 0.2rem;
+        font-size: 1rem;
+    }
+    
+}
+@media all and (max-width: 400px){
+    #Header-text {
+        font-size: 1.4rem;
+    }
+    .check--button {
+        font-size: 1.2rem;
+    }
+    .checkHoroscope__head {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    #Sign_description {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+    #PopUp_Header-text {
+        font-size: 1rem;
+    }
+    #SignImage {
+        width: 7rem;
+        height: 7rem;
+    }
+}

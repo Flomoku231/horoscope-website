@@ -263,6 +263,7 @@ td{
         margin: auto;
         box-shadow: none;
         padding: 2rem 1rem;
+        z-index: -1000 !important;
     }
     .content__left--form label {
         font-size: 1.1rem;

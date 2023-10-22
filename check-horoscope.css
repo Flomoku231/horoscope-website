@@ -154,7 +154,7 @@ td{
     gap: 10px;
     visibility: hidden;
     padding: 0.8rem 1rem;
-    z-index: 500;
+    z-index: 1000 !important;
     display: flex;
     flex-direction: column;
     left: 50%;
@@ -168,6 +168,8 @@ td{
     visibility: visible;
     animation: Popup 1s forwards ease-in-out;
     top: -250px;
+    display: flex;
+    position: fixed;
 }
 @keyframes Popup {
     0%{}

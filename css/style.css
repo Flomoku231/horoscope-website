@@ -127,6 +127,7 @@
 .navbar-light.sticky-top {
   top: -100px;
   transition: 0.5s;
+  z-index: auto;
 }
 
 @media (min-width: 992px) {

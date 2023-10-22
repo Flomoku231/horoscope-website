@@ -1,7 +1,7 @@
 /* CSS variables */
 :root{
     --brand-color: #031d2e;
-    --secondary-brand-color: #ff7010;
+    --secondary-brand-color: #463e31;
     --primary-text-color: #e5f0f5;
     --white-color: #ffffff;
     --black-color: #000000;
@@ -31,7 +31,6 @@ body,html{
     display: flex;
     justify-content: center;
     padding: 1rem;
-    margin-bottom: 1rem;
 }
 #Header-text,#sign_Title{
     color: var(--secondary-brand-color);
@@ -48,6 +47,7 @@ body,html{
 .content__left{
     z-index: 100;
     position: relative;
+    margin-top: -70px;
     justify-content: center;
 }
 .content__right{
@@ -68,7 +68,7 @@ body,html{
     padding: 2rem;
     justify-content: center;
     gap: 0.9rem;
-    max-height: 100rem;
+    /* max-height: 100rem; */
     background-color:var(--white-color);
     border-radius: 1rem;
 }
@@ -95,7 +95,7 @@ body,html{
     display: flex;
     flex: row;
 }
-input[type=text],input[type=date]{
+input[type=text], select, input[type=date],input[type=email]{
     width: 100%;
     padding: 1rem;
     border-radius: 0.4rem;
@@ -120,6 +120,12 @@ input[type=text],input[type=date]{
     -webkit-transform: rotate(360deg);
 }
     
+}
+
+td{
+    border: 1px solid  black !important;  
+    padding: 10px;
+    width: 300px;
 }
 .check--button{
     height: 3rem;
@@ -209,9 +215,11 @@ input[type=text],input[type=date]{
     #Header-text {
         font-size: 1.8rem;
     }
+    .content__left {
+        margin-top: 0px;
+    }
     .content__right {
-        width: 70%;
-        margin-left: -30rem;
+        display: none;
     }
 }
 @media all and (max-width: 550px) {
@@ -249,17 +257,17 @@ input[type=text],input[type=date]{
         margin-top: 25px;
     }
     .content__left--form {
-        width: 80%;
+        width: 95%;
         margin: auto;
+        box-shadow: none;
         padding: 2rem 1rem;
     }
     .content__left--form label {
         font-size: 1.1rem;
     }
-    input[type=text], input[type=date] {
-        padding: 0.8rem;
-        border-radius: 0.2rem;
-        font-size: 1rem;
+    input[type=text], select, input[type=date], input[type=email] {
+        padding: 10px;
+        font-size: 14px;
     }
     
 }
